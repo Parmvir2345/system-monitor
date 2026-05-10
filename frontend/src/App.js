@@ -51,7 +51,7 @@ function App() {
               label="Memory Used"
               value={data.memory_used_gb}
               unit="GB"
-              subtitle={`of ${data.memory_total_gb} GB`}
+              subtitle={`${data.disk_free_gb} GB free`}
               color={data.memory_percent > 80 ? 'red' : 'green'}
             />
             <MetricCard
