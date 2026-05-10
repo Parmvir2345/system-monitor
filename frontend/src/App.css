@@ -1,38 +1,81 @@
-.App {
-  text-align: center;
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  background: #0f1117;
+  color: #ffffff;
+  font-family: 'Courier New', monospace;
+  padding: 2rem;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
+.dashboard { max-width: 900px; margin: 0 auto; }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.header {
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  gap: 1rem;
+  margin-bottom: 2rem;
 }
 
-.App-link {
-  color: #61dafb;
+.header h1 { font-size: 1.8rem; font-weight: 500; }
+
+.badge-online {
+  background: #1a3a2a;
+  color: #3db96a;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 12px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.badge-offline {
+  background: #3a1a1a;
+  color: #e24b4a;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+}
+
+.loading { color: #888; margin-top: 2rem; }
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+.card {
+  background: #1a1d27;
+  border-radius: 12px;
+  padding: 1.5rem;
+  border-left: 4px solid #333;
+}
+
+.card-green { border-left-color: #3db96a; }
+.card-amber { border-left-color: #ef9f27; }
+.card-red   { border-left-color: #e24b4a; }
+.card-blue  { border-left-color: #378add; }
+
+.card-label {
+  font-size: 12px;
+  color: #888;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 0.5rem;
+}
+
+.card-value {
+  font-size: 2rem;
+  font-weight: 500;
+  color: #fff;
+}
+
+.card-unit {
+  font-size: 1rem;
+  color: #888;
+  margin-left: 4px;
+}
+
+.card-subtitle {
+  font-size: 12px;
+  color: #555;
+  margin-top: 6px;
 }
